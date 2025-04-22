@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "muli", sans-serif;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.main
+{
+    display: flex;
+    width: 40vw;
+
+}
+.subClass1
+{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: rgb(19, 29, 6);
+    flex:0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.subClass1 h3{
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    opacity:0;
+}
+.subClass1.active
+{
+    flex:5;
+
+}
+.subClass1.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s ;
+}
+@media(max-width: 500px)
+{
+    .container{
+        width:100vw;
+    }
+    .subClass1:nth-of-type(3){
+        display:none;
+    }
+
+}
